@@ -1,0 +1,25 @@
+<style>
+  h4{
+    color: aqua;
+  }
+  img{
+    height: 100px;
+    width: 100px;
+  }
+</style>
+
+<h1>Hello World!! from {{name | uppercase}}</h1>  
+ <h4>(Above is the example of Interpolation data binding and pipe)</h4>
+
+ <img [src]="myimg">
+ <h4>(Above shown img is the example of property data binding)</h4>
+
+ <button (click)=" randomFunction()">Click me!</button>
+<h4>(Above shown button is the example of Event Binding)</h4>
+
+<h3>My name is {{name2}}</h3>
+<input type="text" [(ngModel)]="name2">
+<h4>(Above text box and dialog box is the example of two-way data binding)</h4>
+
+<router-outlet></router-outlet>  
+<h4>(Above text is the example of basic routing in angular)</h4>
