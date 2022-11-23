@@ -1,0 +1,53 @@
+<h4  class="text-danger">(faculty works!)</h4>
+
+<form [formGroup]="myForm" (ngSubmit)="insert()" class="bg-success p-2 text-dark bg-opacity-50">
+    <table>
+      <tr>
+        <td>Enter id:</td>
+        <td>:</td>
+        <td><input type="text" formControlName="FacultyID"/> </td>
+      </tr>
+      <tr>
+        <td>Enter FacultyName:</td>
+        <td>:</td>
+        <td><input type="text" formControlName="FacultyName"/> </td>
+      </tr>
+      <tr>
+        <td>Enter FacultyExperience:</td>
+        <td>:</td>
+        <td><input type="text" formControlName="FacultyExperience"/> </td>
+      </tr>
+      <tr>
+        <td>Enter ImageUrl:</td>
+        <td>:</td>
+        <td>
+          <input type="text" formControlName="FacultyImage"/> </td>
+      </tr>
+      <tr>
+        <td *ngIf="idToEdit==-1"><button class="btn btn-outline-danger">ADD Faculty</button></td>
+        <td *ngIf="idToEdit!=-1"><button class="btn btn-outline-danger">Edit Faculty</button></td>
+      </tr>
+    </table>
+  </form>
+  
+  <br><br>
+  
+  <table class="table table-striped table-bordered border-success">
+    <tr>
+      <th>id</th>
+      <th>FacultyName</th>
+      <th>FacultyExperience</th>
+      <th>FacultyImage</th>
+      <th>Delete</th>
+      <th>Edit</th>
+    </tr>
+  
+    <tr *ngFor="let fac of faculties; let i=index">
+      <td>{{fac.FacultyID}}</td>
+      <td>{{fac.FacultyName}}</td>
+      <td>{{fac. FacultyExperience}}</td>
+      <td><img [src]="fac.FacultyImage" width="100px"/></td>
+      <td><button (click)="delete(i)"><i class="fa-solid fa-trash"></i></button></td>
+      <td><button (click)="edit(i)"><i class="fa-solid fa-pen-to-square"></i></button></td>
+    </tr>
+  </table>

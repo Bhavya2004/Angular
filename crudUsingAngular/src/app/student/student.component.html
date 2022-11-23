@@ -1,0 +1,55 @@
+<h4 class="text-danger">(student works!)</h4>
+
+
+<form [formGroup]="myForm" (ngSubmit)="insert()"  class="bg-success p-2 text-dark bg-opacity-50">
+    <table>
+      <tr>
+        <td>Enter id:</td>
+        <td>:</td>
+        <td><input type="text" formControlName="id"/> </td>
+      </tr>
+      <tr>
+        <td>Enter StudentName:</td>
+        <td>:</td>
+        <td><input type="text" formControlName="name"/> </td>
+      </tr>
+      <tr>
+        <td>Enter Department:</td>
+        <td>:</td>
+        <td><input type="text" formControlName="department"/> </td>
+      </tr>
+      <tr>
+        <td>Enter ImageUrl:</td>
+        <td>:</td>
+        <td>
+          <input type="text" formControlName="avatar"/> </td>
+      </tr>
+      <tr>
+        <td *ngIf="idToEdit==-1"><button class="btn btn-outline-danger">ADD Student</button></td>
+        <td *ngIf="idToEdit!=-1"><button class="btn btn-outline-danger">Edit Student</button></td>
+      </tr>
+    </table>
+  </form>
+  
+  <br><br>
+  
+  <table class="table table-striped table-bordered border-success">
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>department</th>
+      <th>avatar</th>
+      <th>Delete</th>
+      <th>Edit</th>
+    </tr>
+  
+    <tr *ngFor="let stu of students; let i=index">
+      <td>{{stu.id}}</td>
+      <td>{{stu.name}}</td>
+      <td>{{stu. department}}</td>
+      <td><img [src]="stu.avatar" width="100px"/></td>
+      <td><button (click)="delete(i)"><i class="fa-solid fa-trash"></i></button></td>
+      <td><button (click)="edit(i)"><i class="fa-solid fa-pen-to-square"></i></button></td>
+    </tr>
+  </table>
+
