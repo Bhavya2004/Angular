@@ -1,0 +1,13 @@
+<div class="d-flex justify-contents:center flex-wrap border border-dark bg-success  text-dark bg-opacity-50">
+    <div class="row ">
+        <div class="card m-5 border border-dark border-3" *ngFor="let pro of data" style="width: 18rem;">
+            <img [src]="pro.avatar" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{pro.name}}</h5>
+                <p class="card-text">{{pro.description}}</p>
+                <br>
+                <a routerLink="/product/{{pro.id}}" class="btn btn-primary">More Info</a>
+            </div>
+        </div>
+    </div>
+</div>
