@@ -6,7 +6,12 @@
                 <h5 class="card-title">{{pro.name}}</h5>
                 <p class="card-text">{{pro.description}}</p>
                 <br>
-                <a routerLink="/product/{{pro.id}}" class="btn btn-primary">More Info</a>
+                <div class="float-left">
+                    <button><a routerLink="/product/{{pro.id}}" class="btn btn-primary">More Info</a></button>
+                </div>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-primary" (click)="delete(pro.id)"> <img src="https://img.icons8.com/material-outlined/24/null/trash--v1.png"/></button> 
+                </div>
             </div>
         </div>
     </div>

@@ -18,4 +18,10 @@ export class FacultyComponent {
       console.log(this.data);
     })
   }
+
+  delete(id:any){
+    this.api.deleteStudentById(id).subscribe((res:any)=>{
+      this.ngOnInit();
+    })
+  }
 }

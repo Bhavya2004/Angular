@@ -13,6 +13,11 @@ import { ProductComponent } from './product/product.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { StudentComponent } from './student/student.component';
 import { DetailStudentComponent } from './detail-student/detail-student.component';
+import { AddFacultyComponent } from './add-faculty/add-faculty.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { AddProductComponent } from './add-product/add-product.component';
+import { AddStudentComponent } from './add-student/add-student.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +30,17 @@ import { DetailStudentComponent } from './detail-student/detail-student.componen
     ProductComponent,
     DetailProductComponent,
     StudentComponent,
-    DetailStudentComponent
+    DetailStudentComponent,
+    AddFacultyComponent,
+    AddProductComponent,
+    AddStudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

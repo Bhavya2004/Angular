@@ -18,4 +18,10 @@ export class ProductComponent {
       console.log(this.data);
     })
   }
+
+  delete(id:any){
+    this.api.deleteProductById(id).subscribe((res:any)=>{
+      this.ngOnInit();
+    })
+  }
 }

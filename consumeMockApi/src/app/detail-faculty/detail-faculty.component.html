@@ -45,18 +45,12 @@
           </div>
           <p class="leading-relaxed">{{data.FacultyEmail}}</p>
           <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-            <!-- <div class="flex">
-              <span class="mr-3">Color</span>
-              <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-              <button class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-              <button class="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
-            </div> -->
           </div>
-          <div class="flex items-center flex-wrap ">
-           <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 btn btn-dark" routerLink="/faculty">Back</a>
-           <!-- <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 btn btn-dark" routerLink="/faculty">Delete</a>
-           <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 btn btn-dark" routerLink="/faculty">Edit</a> -->
-        </div>
+          <div class="flex items-center flex-wrap text-left">
+            <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 btn btn-dark" routerLink="/faculty">Back</a>
+            <button type="button" class="btn btn-primary ms-5" routerLink="/faculty/edit/{{data.id}}"> <img src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/24/null/external-edit-basic-user-interface-anggara-basic-outline-anggara-putra.png"/></button> 
+          </div>
+          
         </div>
       </div>
     </div>

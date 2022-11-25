@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Faculty</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<form [formGroup]="myForm" (ngSubmit)="insert()">
+<div class="container">
+  <h2><input [value]="headingName"></h2>
+
+    <div class="form-group">
+      <label for="name"> FacultyName:</label>
+      <input type="text" class="form-control"  placeholder="Enter name" formControlName="FacultyName">
+    </div>
+    <div class="form-group">
+      <label for="img">FacultyImage:</label>
+      <input type="text" class="form-control"  placeholder="Enter imageUrl" formControlName="FacultyImage">
+    </div>
+     <div class="form-group">
+      <label for="email">FacultyEmail:</label>
+      <input type="email" class="form-control"  placeholder="Enter Email" formControlName="FacultyEmail">
+    </div>
+    <div class="form-group">
+      <label for="designation">FacultyDesignation:</label>
+      <input type="text" class="form-control"  placeholder="Enter Designation" formControlName="FacultyDesignation">
+    </div>
+    <button type="submit" class="btn btn-default"><input [value]="btnName"></button>
+    
+  
+</div>
+</form>
+</body>
+</html>

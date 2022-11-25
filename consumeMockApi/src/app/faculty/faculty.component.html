@@ -6,7 +6,13 @@
                 <h5 class="card-title">{{fac.FacultyName}}</h5>
                 <p class="card-text">{{fac.FacultyDesignation}}</p>
                 <br>
-                <a routerLink="/faculty/{{fac.id}}" class="btn btn-primary">More Info</a>
+                <div class="float-left">
+                    <button><a routerLink="/faculty/{{fac.id}}" class="btn btn-primary">More Info</a></button>
+                </div>
+                    <div class="float-right">
+                        <button type="button" class="btn btn-primary" (click)="delete(fac.id)"> <img src="https://img.icons8.com/material-outlined/24/null/trash--v1.png"/></button> 
+                </div>
+            
             </div>
         </div>
     </div>
